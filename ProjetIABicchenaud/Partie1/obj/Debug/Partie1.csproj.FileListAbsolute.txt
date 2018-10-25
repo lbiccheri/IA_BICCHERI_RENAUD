@@ -1,0 +1,10 @@
+H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\bin\Debug\Partie1.exe.config
+H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\bin\Debug\Partie1.exe
+H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\bin\Debug\Partie1.pdb
+H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.csprojResolveAssemblyReference.cache
+H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.formPresentation.resources
+H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.formQuestion.resources
+H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.Properties.Resources.resources
+H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.csproj.GenerateResource.Cache
+H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.exe
+H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.pdb
