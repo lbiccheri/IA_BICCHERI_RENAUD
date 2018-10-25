@@ -1,1 +1,11 @@
 C:\Users\lbiccheri\Downloads\problem solving2\problem solving2\taquin\projettaquin\bin\Debug\projettaquin.exe.config
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\problem solving2\problem solving2\taquin\projettaquin\bin\Debug\projettaquin.exe.config
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\problem solving2\problem solving2\taquin\projettaquin\bin\Debug\projettaquin.exe
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\problem solving2\problem solving2\taquin\projettaquin\bin\Debug\projettaquin.pdb
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\problem solving2\problem solving2\taquin\projettaquin\obj\Debug\projettaquin.csprojAssemblyReference.cache
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\problem solving2\problem solving2\taquin\projettaquin\obj\Debug\projettaquin.Form1.resources
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\problem solving2\problem solving2\taquin\projettaquin\obj\Debug\projettaquin.Properties.Resources.resources
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\problem solving2\problem solving2\taquin\projettaquin\obj\Debug\projettaquin.csproj.GenerateResource.cache
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\problem solving2\problem solving2\taquin\projettaquin\obj\Debug\projettaquin.csproj.CoreCompileInputs.cache
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\problem solving2\problem solving2\taquin\projettaquin\obj\Debug\projettaquin.exe
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\problem solving2\problem solving2\taquin\projettaquin\obj\Debug\projettaquin.pdb
