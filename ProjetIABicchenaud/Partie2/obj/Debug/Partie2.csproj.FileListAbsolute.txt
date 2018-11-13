@@ -17,3 +17,4 @@ C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\bi
 C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.csproj.CopyComplete
 C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.exe
 C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.pdb
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.FormUser.resources

@@ -64,7 +64,7 @@ namespace Partie2
 				for (int j = 0; j < nbnodes; j++)
 					matrice[i, j] = -1;
 
-			// Ensuite on a ls tructure suivante : 
+			// Ensuite on a la tructure suivante : 
 			//  arc : n°noeud départ    n°noeud arrivée  valeur
 			//  exemple 4 : 
 			ligne = monStreamReader.ReadLine();

@@ -11,6 +11,8 @@ namespace Partie2
 	{
 		public List<GenericNode> L_Ouverts;
 		public List<GenericNode> L_Fermes;
+		public List<List<GenericNode>> EtapesOuverts;
+		public List<List<GenericNode>> EtapesFermes;
 
 		public int CountInOpenList()
 		{
@@ -47,6 +49,7 @@ namespace Partie2
 			return null;
 		}
 
+
 		public List<GenericNode> RechercheSolutionAEtoile(GenericNode N0)
 		{
 			L_Ouverts = new List<GenericNode>();
@@ -66,7 +69,8 @@ namespace Partie2
 				// Il faut trouver les noeuds successeurs de N
 				this.MAJSuccesseurs(N);
 				// Inutile de retrier car les insertions ont été faites en respectant l'ordre
-
+				EtapesFermes.Add(new List<GenericNode> (L_Fermes));
+				EtapesOuverts.Add(new List<GenericNode>(L_Ouverts));
 				// On prend le meilleur, donc celui en position 0, pour continuer à explorer les états
 				// A condition qu'il existe bien sûr
 				if (L_Ouverts.Count > 0)
@@ -110,7 +114,15 @@ namespace Partie2
 				{
 					// Rien dans les fermés. Est-il dans les ouverts ?
 					N2bis = ChercheNodeDansOuverts(N2);
-					if (N2bis != null)
+					if (N2bis == null)
+					{
+						// N2 est nouveau, MAJ et insertion dans les ouverts
+						N2.SetGCost(N.GetGCost() + N.GetArcCost(N2));
+						N2.SetNoeud_Parent(N);
+						N2.calculCoutTotal(); // somme de GCost et HCost
+						this.InsertNewNodeInOpenList(N2);
+					}
+					else
 					{
 						// Il existe, donc on l'a déjà vu, N2 n'est qu'une copie de N2Bis
 						// Le nouveau chemin passant par N est-il meilleur ?
@@ -128,15 +140,7 @@ namespace Partie2
 							this.InsertNewNodeInOpenList(N2bis);
 						}
 						// else on ne fait rien, car le nouveau chemin est moins bon
-					}
-					else
-					{
-						// N2 est nouveau, MAJ et insertion dans les ouverts
-						N2.SetGCost(N.GetGCost() + N.GetArcCost(N2));
-						N2.SetNoeud_Parent(N);
-						N2.calculCoutTotal(); // somme de GCost et HCost
-						this.InsertNewNodeInOpenList(N2);
-					}
+					}					
 				}
 				// else il est dans les fermés donc on ne fait rien,
 				// car on a déjà trouvé le plus court chemin pour aller en N2
@@ -147,7 +151,7 @@ namespace Partie2
 		{
 			// Insertion pour respecter l'ordre du cout total le plus petit au plus grand
 			if (this.L_Ouverts.Count == 0)
-			{ L_Ouverts.Add(NewNode); }
+				L_Ouverts.Add(NewNode);
 			else
 			{
 				GenericNode N = L_Ouverts[0];
