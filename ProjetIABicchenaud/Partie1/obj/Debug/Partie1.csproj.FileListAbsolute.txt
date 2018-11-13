@@ -8,3 +8,15 @@ H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.
 H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.csproj.GenerateResource.Cache
 H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.exe
 H:\2A\IA\Projet\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.pdb
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.csprojAssemblyReference.cache
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.formPresentation.resources
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.formQuestion.resources
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.Properties.Resources.resources
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.csproj.GenerateResource.cache
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.exe
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.pdb
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\bin\Debug\Partie1.exe.config
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\bin\Debug\Partie1.exe
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\bin\Debug\Partie1.pdb
+C:\Users\lucas\OneDrive\Documents\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.formFinal.resources

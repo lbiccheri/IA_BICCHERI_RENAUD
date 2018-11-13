@@ -19,10 +19,11 @@ namespace Partie1
 
         private void btContinuer_Click(object sender, EventArgs e)
         {
-            formQuestion fq = new formQuestion();
+            //this.Hide();
+            formQuestion fq = new formQuestion();            
             fq.Show();
             fq.Activate();
-            this.Close();
+            //this.Close();
         }
     }
 }
