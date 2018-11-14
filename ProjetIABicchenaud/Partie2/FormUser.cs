@@ -72,7 +72,7 @@ namespace Partie2
 				DGVOuvFerm.Rows.Add();
 			else
 			{
-				label1.Text = "ERREUR !";
+				label1.Text = "Tu dois d'abord valider !";
 			}
 
 			ajoutEtapePossible = false;
@@ -97,8 +97,8 @@ namespace Partie2
 
 
 			ajoutEtapePossible = (VerifListIdentique(LFerUser, VraieLFer) && VerifListIdentique(LOuvUser, VraieLOuv));
-			if (ajoutEtapePossible) { }
-			else { }
+			if (ajoutEtapePossible) { label1.Text = "Tu peux ajouter une etape !"; }
+			else { label1.Text = "Tu asune erreur !"; }
 		}
 
 		private List<GenericNode> LNoeudsStrToList(string strList)
