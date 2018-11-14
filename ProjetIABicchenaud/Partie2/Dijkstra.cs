@@ -22,6 +22,7 @@ namespace Partie2
 		{
 			InitializeComponent();
 		}
+
 		private void BInit1_Click(object sender, EventArgs e)
 		{
 			TBNoeuInit.Text = "0";
@@ -122,16 +123,18 @@ namespace Partie2
 			Node N0 = new Node();
 			N0.numero = numinitial;
 			List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
+            foreach (Node N in solution)
+                LBDist.Items.Add(N.numero.ToString());
 
-			Node N1 = N0;
-			for (int i = 1; i < solution.Count; i++)
-			{
-				Node N2 = (Node)solution[i];
-				LBDist.Items.Add(Convert.ToString(N1.numero)
-					 + "--->" + Convert.ToString(N2.numero)
-					 + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
-				N1 = N2;
-			}
+			//Node N1 = N0;
+			//for (int i = 1; i < solution.Count; i++)
+			//{
+			//	Node N2 = (Node)solution[i];
+			//	LBDist.Items.Add(Convert.ToString(N1.numero)
+			//		 + "--->" + Convert.ToString(N2.numero)
+			//		 + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
+			//	N1 = N2;
+			//}
 
 			g.GetSearchTree(TVArbre);
 		}

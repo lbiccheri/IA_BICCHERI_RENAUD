@@ -6,54 +6,66 @@ using System.Threading.Tasks;
 
 namespace Partie2
 {
-	public class Node:GenericNode
-	{
-		public int numero;
+    public class Node : GenericNode
+    {
+        public int numero;
 
-		// Méthodes abstrates, donc à surcharger obligatoirement avec override dans une classe fille
-		public override bool IsEqual(GenericNode N2)
-		{
-			Node N2bis = (Node)N2;
+        public Node(Node N) : base(N)
+        {
+            numero = N.numero;
+        }
 
-			return numero == N2bis.numero;
-		}
+        public Node(int numero) : base()
+        {
+            this.numero = numero;
+        }
 
-		public override double GetArcCost(GenericNode N2)
-		{
-			Node N2bis = (Node)N2;
-			return Dijkstra.matrice[numero, N2bis.numero];
-		}
+        public Node() : this(0) { }
 
-		public override bool EndState()
-		{
-			return (numero == Dijkstra.numfinal);
-		}
+        // Méthodes abstrates, donc à surcharger obligatoirement avec override dans une classe fille
+        public override bool IsEqual(GenericNode N2)
+        {
+            Node N2bis = (Node)N2;
 
-		public override List<GenericNode> GetListSucc()
-		{
-			List<GenericNode> lsucc = new List<GenericNode>();
+            return numero == N2bis.numero;
+        }
 
-			for (int i = 0; i < Dijkstra.nbnodes; i++)
-			{
-				if (Dijkstra.matrice[numero, i] != -1)
-				{
-					Node newnode2 = new Node();
-					newnode2.numero = i;
-					lsucc.Add(newnode2);
-				}
-			}
-			return lsucc;
-		}
+        public override double GetArcCost(GenericNode N2)
+        {
+            Node N2bis = (Node)N2;
+            return FormUser.matrice[numero, N2bis.numero];
+        }
+
+        public override bool EndState()
+        {
+            return (numero == FormUser.numfinal);
+        }
+
+        public override List<GenericNode> GetListSucc()
+        {
+            List<GenericNode> lsucc = new List<GenericNode>();
+
+            for (int i = 0; i < FormUser.nbnodes; i++)
+            {
+                if (FormUser.matrice[numero, i] != -1)
+                {
+                    Node newnode2 = new Node();
+                    newnode2.numero = i;
+                    lsucc.Add(newnode2);
+                }
+            }
+            return lsucc;
+        }
 
 
-		public override double CalculeHCost()
-		{
-			return (0);
-		}
+        public override double CalculeHCost()
+        {
+            return (0);
+        }
 
-		public override string ToString()
-		{
-			return Convert.ToString(numero);
-		}
-	}
+        public override string ToString()
+        {
+            return Convert.ToString(numero);
+        }
+    }
 }

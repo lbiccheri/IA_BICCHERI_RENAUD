@@ -14,6 +14,14 @@ namespace Partie2
 		protected GenericNode ParentNode;     // noeud parent
 		protected List<GenericNode> Enfants;  // noeuds enfants
 
+        public GenericNode(GenericNode N)
+        {
+            GCost = N.GCost;
+            HCost = N.HCost;
+            TotalCost = N.TotalCost;
+            ParentNode = N.ParentNode;
+            Enfants = N.Enfants;
+        }
 		public GenericNode()
 		{
 			ParentNode = null;

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Partie2
 {
@@ -54,22 +55,29 @@ namespace Partie2
 		{
 			L_Ouverts = new List<GenericNode>();
 			L_Fermes = new List<GenericNode>();
-			// Le noeud passé en paramètre est supposé être le noeud initial
-			GenericNode N = N0;
+            EtapesFermes = new List<List<GenericNode>>();
+            EtapesOuverts = new List<List<GenericNode>>();
+            // Le noeud passé en paramètre est supposé être le noeud initial
+            GenericNode N = N0;
 			L_Ouverts.Add(N0);
 
-			// tant que le noeud n'est pas terminal et que ouverts n'est pas vide
-			while (L_Ouverts.Count != 0 && N.EndState() == false)
+            EtapesFermes.Add(new List<GenericNode>(L_Fermes));
+            EtapesOuverts.Add(new List<GenericNode>(L_Ouverts));
+            // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
+            while (L_Ouverts.Count != 0 && N.EndState() == false)
 			{
-				// Le meilleur noeud des ouverts est supposé placé en tête de liste
-				// On le place dans les fermés
-				L_Ouverts.Remove(N);
+
+                // Le meilleur noeud des ouverts est supposé placé en tête de liste
+                // On le place dans les fermés
+                L_Ouverts.Remove(N);
 				L_Fermes.Add(N);
 
 				// Il faut trouver les noeuds successeurs de N
 				this.MAJSuccesseurs(N);
-				// Inutile de retrier car les insertions ont été faites en respectant l'ordre
-				EtapesFermes.Add(new List<GenericNode> (L_Fermes));
+                // Inutile de retrier car les insertions ont été faites en respectant l'ordre
+
+
+                EtapesFermes.Add(new List<GenericNode>(L_Fermes));
 				EtapesOuverts.Add(new List<GenericNode>(L_Ouverts));
 				// On prend le meilleur, donc celui en position 0, pour continuer à explorer les états
 				// A condition qu'il existe bien sûr
@@ -114,32 +122,32 @@ namespace Partie2
 				{
 					// Rien dans les fermés. Est-il dans les ouverts ?
 					N2bis = ChercheNodeDansOuverts(N2);
-					if (N2bis == null)
+					if (N2bis != null)
 					{
-						// N2 est nouveau, MAJ et insertion dans les ouverts
-						N2.SetGCost(N.GetGCost() + N.GetArcCost(N2));
-						N2.SetNoeud_Parent(N);
-						N2.calculCoutTotal(); // somme de GCost et HCost
-						this.InsertNewNodeInOpenList(N2);
-					}
-					else
+                        // Il existe, donc on l'a déjà vu, N2 n'est qu'une copie de N2Bis
+                        // Le nouveau chemin passant par N est-il meilleur ?
+                        if (N.GetGCost() + N.GetArcCost(N2) < N2bis.GetGCost())
+                        {
+                            // Mise à jour de N2bis
+                            N2bis.SetGCost(N.GetGCost() + N.GetArcCost(N2));
+                            // HCost pas recalculé car toujours bon
+                            N2bis.RecalculeCoutTotal(); // somme de GCost et HCost
+                                                        // Mise à jour de la famille ....
+                            N2bis.Supprime_Liens_Parent();
+                            N2bis.SetNoeud_Parent(N);
+                            // Mise à jour des ouverts
+                            L_Ouverts.Remove(N2bis);
+                            this.InsertNewNodeInOpenList(N2bis);
+                        }
+                        // else on ne fait rien, car le nouveau chemin est moins bon
+                    }
+                    else
 					{
-						// Il existe, donc on l'a déjà vu, N2 n'est qu'une copie de N2Bis
-						// Le nouveau chemin passant par N est-il meilleur ?
-						if (N.GetGCost() + N.GetArcCost(N2) < N2bis.GetGCost())
-						{
-							// Mise à jour de N2bis
-							N2bis.SetGCost(N.GetGCost() + N.GetArcCost(N2));
-							// HCost pas recalculé car toujours bon
-							N2bis.RecalculeCoutTotal(); // somme de GCost et HCost
-														// Mise à jour de la famille ....
-							N2bis.Supprime_Liens_Parent();
-							N2bis.SetNoeud_Parent(N);
-							// Mise à jour des ouverts
-							L_Ouverts.Remove(N2bis);
-							this.InsertNewNodeInOpenList(N2bis);
-						}
-						// else on ne fait rien, car le nouveau chemin est moins bon
+                        // N2 est nouveau, MAJ et insertion dans les ouverts
+                        N2.SetGCost(N.GetGCost() + N.GetArcCost(N2));
+                        N2.SetNoeud_Parent(N);
+                        N2.calculCoutTotal(); // somme de GCost et HCost
+                        this.InsertNewNodeInOpenList(N2);
 					}					
 				}
 				// else il est dans les fermés donc on ne fait rien,
