@@ -15,6 +15,7 @@ namespace Partie1
 		public formPresentation()
 		{
 			InitializeComponent();
+            lbPresentation.Text = "Examen d'Intelligence Artificielle";
 		}
 
         private void btContinuer_Click(object sender, EventArgs e)
@@ -22,8 +23,7 @@ namespace Partie1
             //this.Hide();
             formQuestion fq = new formQuestion();            
             fq.Show();
-            fq.Activate();
-            //this.Close();
+            fq.Activate();            
         }
     }
 }

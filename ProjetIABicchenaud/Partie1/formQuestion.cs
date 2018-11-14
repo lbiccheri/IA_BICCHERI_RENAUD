@@ -15,7 +15,8 @@ namespace Partie1
 {
     public partial class formQuestion : Form
     {
-        int compt = 1;
+        int compt = 0;
+        int repJuste = 0;
         public formQuestion()
         {
             InitializeComponent();
@@ -34,32 +35,27 @@ namespace Partie1
             XmlNode titreQuestion = question.SelectSingleNode("titre");
             lbQuestion.Text = titreQuestion.InnerText;
 
-            //// Donne les propositions à la question
+            //// Donne les propositions à la question            
 
-            XmlNode titreReponse = question.SelectSingleNode("reponseAtt");
-            cb1Reponse.Text = titreReponse.InnerText;
+            XmlNode titreReponse = question.SelectSingleNode("A");            
+            rbRep1.Text = titreReponse.InnerText;
 
-            XmlNode titreReponse2 = question.SelectSingleNode("reponseAutre1");
-            cb2Reponse.Text = titreReponse2.InnerText;
+            XmlNode titreReponse2 = question.SelectSingleNode("B");
+            rbRep2.Text = titreReponse2.InnerText;
 
-            XmlNode titreReponse3 = question.SelectSingleNode("reponseAutre2");
-            cb3Reponse.Text = titreReponse3.InnerText;
-
-            lbNbQuestion.Text = compt + "/20";
+            XmlNode titreReponse3 = question.SelectSingleNode("C");
+            rbRep3.Text = titreReponse3.InnerText;            
+            
+            lbNbQuestion.Text = compt + "/20";                        
         }               
         private void btQuestionSuivante_Click(object sender, EventArgs e)
         {
             compt++;
             lbNbQuestion.Text = compt + "/20";
+            
             if (compt < 21)
-            {
-                if(cb1Reponse.Checked == true || cb2Reponse.Checked == true || cb3Reponse.Checked == true)
-                {
-                    cb1Reponse.Checked = false;
-                    cb2Reponse.Checked = false;
-                    cb3Reponse.Checked = false;
-                }
-
+            {                               
+                             
                 // numéro de la question
                 //Random rand = new Random();
                 //int numeroQuestion = rand.Next(20);
@@ -71,34 +67,41 @@ namespace Partie1
                 // Selectionne la question
                 XmlNode question = questionnaire.GetElementsByTagName("Question")[numeroQuestion];
 
+                //// Donne la réponse de la question
+                XmlNode reponseBonne = question.SelectSingleNode("reponseBonne");
+                string rep = reponseBonne.InnerText;
+
+                foreach (RadioButton RB in gbReponse.Controls.OfType<RadioButton>())
+                {
+                    if (RB.Checked == true && RB.Text == rep)
+                        repJuste++;
+                }
+                //Initialise les RB                
+                foreach (RadioButton rb in gbReponse.Controls.OfType<RadioButton>())
+                {
+                    rb.Checked = false;
+                }
                 // Donne le titre de la question
                 XmlNode titreQuestion = question.SelectSingleNode("titre");
                 lbQuestion.Text = titreQuestion.InnerText;
 
                 //// Donne les propositions à la question
 
-                XmlNode titreReponse = question.SelectSingleNode("reponseAtt");
-                cb1Reponse.Text = titreReponse.InnerText;
+                XmlNode titreReponse = question.SelectSingleNode("A");
+                rbRep1.Text = titreReponse.InnerText;
 
-                XmlNode titreReponse2 = question.SelectSingleNode("reponseAutre1");
-                cb2Reponse.Text = titreReponse2.InnerText;
+                XmlNode titreReponse2 = question.SelectSingleNode("B");
+                rbRep2.Text = titreReponse2.InnerText;
 
-                XmlNode titreReponse3 = question.SelectSingleNode("reponseAutre2");
-                cb3Reponse.Text = titreReponse3.InnerText;
-                /*
-                //// Donne la réponse de la question
-                XmlNode reponse = question.SelectSingleNode("reponse");
-                Console.WriteLine("\n• " + reponse.InnerText);
-                */
-                
-                
+                XmlNode titreReponse3 = question.SelectSingleNode("C");
+                rbRep3.Text = titreReponse3.InnerText;                                               
             }
             else
             {
-                formFinal ff = new formFinal();
-                ff.Show();
-                ff.Activate();
+                lbNbQuestion.Text = "20/20";
+                MessageBox.Show("Bravo vous venez de faire " + repJuste + " réponses justes! ");
                 this.Close();
+                
             } 
             
         }

@@ -34,22 +34,23 @@
             // 
             // lbPresentation
             // 
-            this.lbPresentation.BackColor = System.Drawing.SystemColors.Control;
-            this.lbPresentation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPresentation.Location = new System.Drawing.Point(327, 215);
+            this.lbPresentation.BackColor = System.Drawing.Color.Transparent;
+            this.lbPresentation.Font = new System.Drawing.Font("Georgia", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPresentation.ForeColor = System.Drawing.Color.Red;
+            this.lbPresentation.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbPresentation.Location = new System.Drawing.Point(13, 47);
             this.lbPresentation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPresentation.Name = "lbPresentation";
-            this.lbPresentation.Size = new System.Drawing.Size(478, 137);
+            this.lbPresentation.Size = new System.Drawing.Size(952, 110);
             this.lbPresentation.TabIndex = 0;
-            this.lbPresentation.Text = "Bienvenue à vous! Ce test a pour but de tester vos connaissances dans le module I" +
-    "ntelligence Artificielle. Êtes-vous prêt?";
+            this.lbPresentation.Text = "Label\r\n";
             // 
             // btContinuer
             // 
-            this.btContinuer.Location = new System.Drawing.Point(482, 442);
+            this.btContinuer.Location = new System.Drawing.Point(489, 507);
             this.btContinuer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btContinuer.Name = "btContinuer";
-            this.btContinuer.Size = new System.Drawing.Size(160, 74);
+            this.btContinuer.Size = new System.Drawing.Size(269, 118);
             this.btContinuer.TabIndex = 1;
             this.btContinuer.Text = "C\'est parti!";
             this.btContinuer.UseVisualStyleBackColor = true;
@@ -60,6 +61,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::Partie1.Properties.Resources.pere_fouras;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.btContinuer);
             this.Controls.Add(this.lbPresentation);

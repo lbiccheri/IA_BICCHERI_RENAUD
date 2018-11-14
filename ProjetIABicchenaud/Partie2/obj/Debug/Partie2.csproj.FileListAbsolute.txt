@@ -15,4 +15,6 @@ C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\bi
 C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.exe
 C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.pdb
 C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.FormUser.resources
-C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.csprojResolveAssemblyReference.cache
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.csprojAssemblyReference.cache
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.csproj.CoreCompileInputs.cache
+C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie2\obj\Debug\Partie2.csproj.CopyComplete

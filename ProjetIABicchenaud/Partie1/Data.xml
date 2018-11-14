@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfQuestion xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Question>    
-    <titre> Quel est l'intitulé du cours? </titre>
-    <reponseAtt> IA </reponseAtt>
-    <reponseAutre1> C# </reponseAutre1>
-    <reponseAutre2> FH </reponseAutre2>
+    <titre> Ceci est un exemple : Quel est l'intitulé du cours? </titre>
+    <A> Intelligence Artificielle </A>
+    <B> C# </B>
+    <C> FH </C>
+    <reponseBonne> Intelligence A </reponseBonne>
   </Question>
 
   <Question>
     <titre> Quelle est la deuxième question? </titre>
-    <reponseAtt> A </reponseAtt>
-    <reponseAutre1> B </reponseAutre1>
-    <reponseAutre2> C </reponseAutre2>
+    <A> A </A>
+    <B> B </B>
+    <C> C </C>
+    <reponseBonne> B </reponseBonne>
   </Question>
 
 </ArrayOfQuestion>
