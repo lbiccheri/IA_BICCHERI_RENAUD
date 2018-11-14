@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfQuestion xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Question>    
+    <titre> Quel est l'intitulé du cours? </titre>
+    <reponseAtt> IA </reponseAtt>
+    <reponseAutre1> C# </reponseAutre1>
+    <reponseAutre2> FH </reponseAutre2>
+  </Question>
+
+  <Question>
+    <titre> Quelle est la deuxième question? </titre>
+    <reponseAtt> A </reponseAtt>
+    <reponseAutre1> B </reponseAutre1>
+    <reponseAutre2> C </reponseAutre2>
+  </Question>
+
+</ArrayOfQuestion>
