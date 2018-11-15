@@ -34,3 +34,14 @@ C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\ob
 C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.exe
 C:\Users\flori\Documents\GitHub\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.pdb
 >>>>>>> d0e18848036e0ed86bce994a0e80a8307cb92983
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\bin\Debug\Partie1.exe.config
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\bin\Debug\Partie1.exe
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\bin\Debug\Partie1.pdb
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.csprojAssemblyReference.cache
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.formPresentation.resources
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.formQuestion.resources
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.Properties.Resources.resources
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.csproj.GenerateResource.cache
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.exe
+C:\Users\lucas\OneDrive\Documents\Projet IA\IA_BICCHERI_RENAUD\ProjetIABicchenaud\Partie1\obj\Debug\Partie1.pdb
