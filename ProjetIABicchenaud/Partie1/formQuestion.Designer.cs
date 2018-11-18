@@ -35,6 +35,8 @@
             this.rbRep2 = new System.Windows.Forms.RadioButton();
             this.rbRep3 = new System.Windows.Forms.RadioButton();
             this.gbReponse = new System.Windows.Forms.GroupBox();
+            this.btVerification = new System.Windows.Forms.Button();
+            this.lbVerification = new System.Windows.Forms.Label();
             this.gbReponse.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +111,7 @@
             // 
             // gbReponse
             // 
+            this.gbReponse.Controls.Add(this.lbVerification);
             this.gbReponse.Controls.Add(this.rbRep1);
             this.gbReponse.Controls.Add(this.rbRep2);
             this.gbReponse.Controls.Add(this.rbRep3);
@@ -119,12 +122,32 @@
             this.gbReponse.TabStop = false;
             this.gbReponse.Text = "Réponses possibles";
             // 
+            // btVerification
+            // 
+            this.btVerification.Location = new System.Drawing.Point(504, 564);
+            this.btVerification.Name = "btVerification";
+            this.btVerification.Size = new System.Drawing.Size(258, 96);
+            this.btVerification.TabIndex = 13;
+            this.btVerification.Text = "Vérifier";
+            this.btVerification.UseVisualStyleBackColor = true;
+            this.btVerification.Click += new System.EventHandler(this.btVerification_Click);
+            // 
+            // lbVerification
+            // 
+            this.lbVerification.AutoSize = true;
+            this.lbVerification.Location = new System.Drawing.Point(65, 314);
+            this.lbVerification.Name = "lbVerification";
+            this.lbVerification.Size = new System.Drawing.Size(51, 20);
+            this.lbVerification.TabIndex = 12;
+            this.lbVerification.Text = "label1";
+            // 
             // formQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1204, 696);
+            this.Controls.Add(this.btVerification);
             this.Controls.Add(this.gbReponse);
             this.Controls.Add(this.lbNbQuestion);
             this.Controls.Add(this.btQuestionSuivante);
@@ -151,5 +174,7 @@
         private System.Windows.Forms.RadioButton rbRep2;
         private System.Windows.Forms.RadioButton rbRep3;
         private System.Windows.Forms.GroupBox gbReponse;
+        private System.Windows.Forms.Label lbVerification;
+        private System.Windows.Forms.Button btVerification;
     }
 }

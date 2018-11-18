@@ -5,7 +5,7 @@
     <A> Intelligence Artificielle </A>
     <B> C# </B>
     <C> FH </C>
-    <reponseBonne> Intelligence A </reponseBonne>
+    <reponseBonne> Intelligence Artificielle </reponseBonne>
   </Question>
 
   <Question>
@@ -14,6 +14,22 @@
     <B> B </B>
     <C> C </C>
     <reponseBonne> B </reponseBonne>
+  </Question>
+  
+<Question>
+    <titre> Quelle est la troisième question? </titre>
+    <A> A </A>
+    <B> B </B>
+    <C> C </C>
+    <reponseBonne> A </reponseBonne>
+  </Question>
+  
+<Question>
+    <titre> Quelle est la quatrième question? </titre>
+    <A> A </A>
+    <B> B </B>
+    <C> C </C>
+    <reponseBonne> C </reponseBonne>
   </Question>
 
 </ArrayOfQuestion>

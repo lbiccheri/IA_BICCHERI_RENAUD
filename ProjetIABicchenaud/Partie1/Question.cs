@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Partie1
 {
@@ -18,13 +20,23 @@ namespace Partie1
 
         public string reponseBonne { get; set; }
         
-        public Question (string titre, string reponseatt, string reponseautre1, string reponseautre2, string reponseBonne)
+        public Question (string titre, string reponse1, string reponse2, string reponse3, string reponseBonne)
         {            
             this.titre = titre;
-            this.A = reponseautre1;
-            this.B = reponseautre2;
-            this.C = reponseatt;
+            this.A = reponse1;
+            this.B = reponse2;
+            this.C = reponse3;
             this.reponseBonne = reponseBonne;
+        }
+        public void AjouterQuestion ()
+        {
+            List <Question> questions = new List<Question>();
+            //Ajoute la question que l'on souhaite avec les bonnes données dans notre fichier xml
+            questions.Add(this); 
+
+            StreamWriter writer = new StreamWriter("../../Data.xml");
+            new XmlSerializer(typeof(List<Question>)).Serialize(writer, questions);
+            writer.Close();
         }
     }
 }
