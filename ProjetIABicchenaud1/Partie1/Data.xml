@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfQuestion xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Question>    
+    <titre> Ceci est un exemple : Quel est l'intitulé du cours? </titre>
+    <A> Intelligence Artificielle </A>
+    <B> C# </B>
+    <C> FH </C>
+    <reponseBonne> Intelligence Artificielle </reponseBonne>
+  </Question>
+
+  <Question>
+    <titre> Quelle est la deuxième question? </titre>
+    <A> A </A>
+    <B> B </B>
+    <C> C </C>
+    <reponseBonne> B </reponseBonne>
+  </Question>
+  
+<Question>
+    <titre> Quelle est la troisième question? </titre>
+    <A> A </A>
+    <B> B </B>
+    <C> C </C>
+    <reponseBonne> A </reponseBonne>
+  </Question>
+  
+<Question>
+    <titre> Quelle est la quatrième question? </titre>
+    <A> A </A>
+    <B> B </B>
+    <C> C </C>
+    <reponseBonne> C </reponseBonne>
+  </Question>
+
+</ArrayOfQuestion>

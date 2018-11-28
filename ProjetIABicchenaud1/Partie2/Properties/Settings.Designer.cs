@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Partie1.Properties
+namespace Partie2.Properties
 {
 
 
