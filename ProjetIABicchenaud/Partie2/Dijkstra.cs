@@ -136,7 +136,7 @@ namespace Partie2
 			//	N1 = N2;
 			//}
 
-			g.GetSearchTree(TVArbre);
+			g.GetSearchTree(TVArbre, false);
 		}
 	}
 }

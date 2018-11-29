@@ -55,29 +55,29 @@ namespace Partie2
 		{
 			L_Ouverts = new List<GenericNode>();
 			L_Fermes = new List<GenericNode>();
-            EtapesFermes = new List<List<GenericNode>>();
-            EtapesOuverts = new List<List<GenericNode>>();
-            // Le noeud passé en paramètre est supposé être le noeud initial
-            GenericNode N = N0;
+			EtapesFermes = new List<List<GenericNode>>();
+			EtapesOuverts = new List<List<GenericNode>>();
+			// Le noeud passé en paramètre est supposé être le noeud initial
+			GenericNode N = N0;
 			L_Ouverts.Add(N0);
 
-            EtapesFermes.Add(new List<GenericNode>(L_Fermes));
-            EtapesOuverts.Add(new List<GenericNode>(L_Ouverts));
-            // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
-            while (L_Ouverts.Count != 0 && N.EndState() == false)
+			EtapesFermes.Add(new List<GenericNode>(L_Fermes));
+			EtapesOuverts.Add(new List<GenericNode>(L_Ouverts));
+			// tant que le noeud n'est pas terminal et que ouverts n'est pas vide
+			while (L_Ouverts.Count != 0 && N.EndState() == false)
 			{
 
-                // Le meilleur noeud des ouverts est supposé placé en tête de liste
-                // On le place dans les fermés
-                L_Ouverts.Remove(N);
+				// Le meilleur noeud des ouverts est supposé placé en tête de liste
+				// On le place dans les fermés
+				L_Ouverts.Remove(N);
 				L_Fermes.Add(N);
 
 				// Il faut trouver les noeuds successeurs de N
 				this.MAJSuccesseurs(N);
-                // Inutile de retrier car les insertions ont été faites en respectant l'ordre
+				// Inutile de retrier car les insertions ont été faites en respectant l'ordre
 
 
-                EtapesFermes.Add(new List<GenericNode>(L_Fermes));
+				EtapesFermes.Add(new List<GenericNode>(L_Fermes));
 				EtapesOuverts.Add(new List<GenericNode>(L_Ouverts));
 				// On prend le meilleur, donc celui en position 0, pour continuer à explorer les états
 				// A condition qu'il existe bien sûr
@@ -90,6 +90,8 @@ namespace Partie2
 					N = null;
 				}
 			}
+
+
 
 			// A* terminé
 			// On retourne le chemin qui va du noeud initial au noeud final sous forme de liste
@@ -124,31 +126,31 @@ namespace Partie2
 					N2bis = ChercheNodeDansOuverts(N2);
 					if (N2bis != null)
 					{
-                        // Il existe, donc on l'a déjà vu, N2 n'est qu'une copie de N2Bis
-                        // Le nouveau chemin passant par N est-il meilleur ?
-                        if (N.GetGCost() + N.GetArcCost(N2) < N2bis.GetGCost())
-                        {
-                            // Mise à jour de N2bis
-                            N2bis.SetGCost(N.GetGCost() + N.GetArcCost(N2));
-                            // HCost pas recalculé car toujours bon
-                            N2bis.RecalculeCoutTotal(); // somme de GCost et HCost
-                                                        // Mise à jour de la famille ....
-                            N2bis.Supprime_Liens_Parent();
-                            N2bis.SetNoeud_Parent(N);
-                            // Mise à jour des ouverts
-                            L_Ouverts.Remove(N2bis);
-                            this.InsertNewNodeInOpenList(N2bis);
-                        }
-                        // else on ne fait rien, car le nouveau chemin est moins bon
-                    }
-                    else
+						// Il existe, donc on l'a déjà vu, N2 n'est qu'une copie de N2Bis
+						// Le nouveau chemin passant par N est-il meilleur ?
+						if (N.GetGCost() + N.GetArcCost(N2) < N2bis.GetGCost())
+						{
+							// Mise à jour de N2bis
+							N2bis.SetGCost(N.GetGCost() + N.GetArcCost(N2));
+							// HCost pas recalculé car toujours bon
+							N2bis.RecalculeCoutTotal(); // somme de GCost et HCost
+														// Mise à jour de la famille ....
+							N2bis.Supprime_Liens_Parent();
+							N2bis.SetNoeud_Parent(N);
+							// Mise à jour des ouverts
+							L_Ouverts.Remove(N2bis);
+							this.InsertNewNodeInOpenList(N2bis);
+						}
+						// else on ne fait rien, car le nouveau chemin est moins bon
+					}
+					else
 					{
-                        // N2 est nouveau, MAJ et insertion dans les ouverts
-                        N2.SetGCost(N.GetGCost() + N.GetArcCost(N2));
-                        N2.SetNoeud_Parent(N);
-                        N2.calculCoutTotal(); // somme de GCost et HCost
-                        this.InsertNewNodeInOpenList(N2);
-					}					
+						// N2 est nouveau, MAJ et insertion dans les ouverts
+						N2.SetGCost(N.GetGCost() + N.GetArcCost(N2));
+						N2.SetNoeud_Parent(N);
+						N2.calculCoutTotal(); // somme de GCost et HCost
+						this.InsertNewNodeInOpenList(N2);
+					}
 				}
 				// else il est dans les fermés donc on ne fait rien,
 				// car on a déjà trouvé le plus court chemin pour aller en N2
@@ -188,28 +190,31 @@ namespace Partie2
 
 		// Si on veut afficher l'arbre de recherche, il suffit de passer un treeview en paramètres
 		// Celui-ci est mis à jour avec les noeuds de la liste des fermés, on ne tient pas compte des ouverts
-		public void GetSearchTree(TreeView TV)
+		public void GetSearchTree(TreeView TV, bool vide)
 		{
 			if (L_Fermes == null) return;
 			if (L_Fermes.Count == 0) return;
 
 			// On suppose le TreeView préexistant
 			TV.Nodes.Clear();
-
 			TreeNode TN = new TreeNode(L_Fermes[0].ToString());
+			if (vide)
+				TN.Text = "?";
 			TV.Nodes.Add(TN);
 
-			AjouteBranche(L_Fermes[0], TN);
+			AjouteBranche(L_Fermes[0], TN, vide);
 		}
 
 		// AjouteBranche est exclusivement appelée par GetSearchTree; les noeuds sont ajoutés de manière récursive
-		private void AjouteBranche(GenericNode GN, TreeNode TN)
+		private void AjouteBranche(GenericNode GN, TreeNode TN, bool vide)
 		{
 			foreach (GenericNode GNfils in GN.GetEnfants())
 			{
 				TreeNode TNfils = new TreeNode(GNfils.ToString());
+				if (vide)
+					TNfils.Text = "?";
 				TN.Nodes.Add(TNfils);
-				if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils);
+				if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils, vide);
 			}
 		}
 	}

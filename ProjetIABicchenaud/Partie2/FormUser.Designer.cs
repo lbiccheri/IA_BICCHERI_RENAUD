@@ -40,13 +40,20 @@
 			this.BAjoutEtape = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.LConsigne2 = new System.Windows.Forms.Label();
-			this.BVerif = new System.Windows.Forms.Button();
+			this.BVerifEtape = new System.Windows.Forms.Button();
 			this.BNoeuds = new System.Windows.Forms.Button();
 			this.LErrNode = new System.Windows.Forms.Label();
 			this.LInitNode = new System.Windows.Forms.Label();
 			this.CBNodeInit = new System.Windows.Forms.ComboBox();
 			this.CBNodeFin = new System.Windows.Forms.ComboBox();
+			this.gpEtape1 = new System.Windows.Forms.GroupBox();
+			this.gpEtape2 = new System.Windows.Forms.GroupBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.bValiderTV = new System.Windows.Forms.Button();
+			this.tvArbre = new System.Windows.Forms.TreeView();
 			((System.ComponentModel.ISupportInitialize)(this.DGVOuvFerm)).BeginInit();
+			this.gpEtape1.SuspendLayout();
+			this.gpEtape2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// LNoeuInit
@@ -101,10 +108,10 @@
 			// LConsigne1
 			// 
 			this.LConsigne1.AutoSize = true;
-			this.LConsigne1.Location = new System.Drawing.Point(476, 67);
+			this.LConsigne1.Location = new System.Drawing.Point(11, 38);
 			this.LConsigne1.MaximumSize = new System.Drawing.Size(400, 0);
 			this.LConsigne1.Name = "LConsigne1";
-			this.LConsigne1.Size = new System.Drawing.Size(368, 17);
+			this.LConsigne1.Size = new System.Drawing.Size(344, 16);
 			this.LConsigne1.TabIndex = 16;
 			this.LConsigne1.Text = "Remplissez les ouverts (O) et fermés (F) étape par étape";
 			// 
@@ -115,10 +122,10 @@
 			this.DGVOuvFerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fermes,
             this.Ouverts});
-			this.DGVOuvFerm.Location = new System.Drawing.Point(479, 141);
+			this.DGVOuvFerm.Location = new System.Drawing.Point(14, 108);
 			this.DGVOuvFerm.Name = "DGVOuvFerm";
 			this.DGVOuvFerm.RowTemplate.Height = 24;
-			this.DGVOuvFerm.Size = new System.Drawing.Size(248, 280);
+			this.DGVOuvFerm.Size = new System.Drawing.Size(248, 342);
 			this.DGVOuvFerm.TabIndex = 17;
 			// 
 			// Fermes
@@ -135,7 +142,8 @@
 			// 
 			// BAjoutEtape
 			// 
-			this.BAjoutEtape.Location = new System.Drawing.Point(750, 227);
+			this.BAjoutEtape.Enabled = false;
+			this.BAjoutEtape.Location = new System.Drawing.Point(285, 241);
 			this.BAjoutEtape.Name = "BAjoutEtape";
 			this.BAjoutEtape.Size = new System.Drawing.Size(94, 44);
 			this.BAjoutEtape.TabIndex = 18;
@@ -146,36 +154,38 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(747, 121);
+			this.label1.Location = new System.Drawing.Point(282, 129);
+			this.label1.MaximumSize = new System.Drawing.Size(110, 0);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(0, 17);
+			this.label1.Size = new System.Drawing.Size(45, 16);
 			this.label1.TabIndex = 19;
+			this.label1.Text = "label1";
 			// 
 			// LConsigne2
 			// 
 			this.LConsigne2.AutoSize = true;
-			this.LConsigne2.Location = new System.Drawing.Point(476, 84);
+			this.LConsigne2.Location = new System.Drawing.Point(11, 58);
 			this.LConsigne2.MaximumSize = new System.Drawing.Size(400, 0);
 			this.LConsigne2.Name = "LConsigne2";
-			this.LConsigne2.Size = new System.Drawing.Size(381, 34);
+			this.LConsigne2.Size = new System.Drawing.Size(359, 32);
 			this.LConsigne2.TabIndex = 21;
 			this.LConsigne2.Text = "Ecrivez directement le numéro des noeud séparés par des espaces ou virgule";
 			// 
-			// BVerif
+			// BVerifEtape
 			// 
-			this.BVerif.Location = new System.Drawing.Point(750, 159);
-			this.BVerif.Name = "BVerif";
-			this.BVerif.Size = new System.Drawing.Size(94, 44);
-			this.BVerif.TabIndex = 22;
-			this.BVerif.Text = "Vérifier l\'étape";
-			this.BVerif.UseVisualStyleBackColor = true;
-			this.BVerif.Click += new System.EventHandler(this.BVerif_Click);
+			this.BVerifEtape.Location = new System.Drawing.Point(285, 173);
+			this.BVerifEtape.Name = "BVerifEtape";
+			this.BVerifEtape.Size = new System.Drawing.Size(94, 44);
+			this.BVerifEtape.TabIndex = 22;
+			this.BVerifEtape.Text = "Vérifier l\'étape";
+			this.BVerifEtape.UseVisualStyleBackColor = true;
+			this.BVerifEtape.Click += new System.EventHandler(this.BVerifEtape_Click);
 			// 
 			// BNoeuds
 			// 
 			this.BNoeuds.Location = new System.Drawing.Point(256, 252);
 			this.BNoeuds.Name = "BNoeuds";
-			this.BNoeuds.Size = new System.Drawing.Size(83, 53);
+			this.BNoeuds.Size = new System.Drawing.Size(94, 53);
 			this.BNoeuds.TabIndex = 23;
 			this.BNoeuds.Text = "Valider les noeuds";
 			this.BNoeuds.UseVisualStyleBackColor = true;
@@ -216,22 +226,76 @@
 			this.CBNodeFin.Size = new System.Drawing.Size(51, 24);
 			this.CBNodeFin.TabIndex = 27;
 			// 
+			// gpEtape1
+			// 
+			this.gpEtape1.Controls.Add(this.BVerifEtape);
+			this.gpEtape1.Controls.Add(this.LConsigne2);
+			this.gpEtape1.Controls.Add(this.label1);
+			this.gpEtape1.Controls.Add(this.BAjoutEtape);
+			this.gpEtape1.Controls.Add(this.DGVOuvFerm);
+			this.gpEtape1.Controls.Add(this.LConsigne1);
+			this.gpEtape1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.gpEtape1.Location = new System.Drawing.Point(465, 12);
+			this.gpEtape1.Name = "gpEtape1";
+			this.gpEtape1.Size = new System.Drawing.Size(403, 456);
+			this.gpEtape1.TabIndex = 28;
+			this.gpEtape1.TabStop = false;
+			this.gpEtape1.Text = "Première étape";
+			// 
+			// gpEtape2
+			// 
+			this.gpEtape2.Controls.Add(this.label2);
+			this.gpEtape2.Controls.Add(this.bValiderTV);
+			this.gpEtape2.Controls.Add(this.tvArbre);
+			this.gpEtape2.Location = new System.Drawing.Point(933, 13);
+			this.gpEtape2.Name = "gpEtape2";
+			this.gpEtape2.Size = new System.Drawing.Size(336, 455);
+			this.gpEtape2.TabIndex = 29;
+			this.gpEtape2.TabStop = false;
+			this.gpEtape2.Text = "Deuxième étape";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(25, 396);
+			this.label2.MaximumSize = new System.Drawing.Size(289, 0);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(46, 17);
+			this.label2.TabIndex = 4;
+			this.label2.Text = "label2";
+			// 
+			// bValiderTV
+			// 
+			this.bValiderTV.Enabled = false;
+			this.bValiderTV.Location = new System.Drawing.Point(25, 306);
+			this.bValiderTV.Name = "bValiderTV";
+			this.bValiderTV.Size = new System.Drawing.Size(289, 83);
+			this.bValiderTV.TabIndex = 3;
+			this.bValiderTV.Text = "Valider l\'arbre";
+			this.bValiderTV.UseVisualStyleBackColor = true;
+			this.bValiderTV.Click += new System.EventHandler(this.bValiderTV_Click);
+			// 
+			// tvArbre
+			// 
+			this.tvArbre.LabelEdit = true;
+			this.tvArbre.Location = new System.Drawing.Point(25, 37);
+			this.tvArbre.Name = "tvArbre";
+			this.tvArbre.Size = new System.Drawing.Size(289, 255);
+			this.tvArbre.TabIndex = 0;
+			this.tvArbre.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvArbre_NodeMouseDoubleClick);
+			// 
 			// FormUser
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(932, 576);
+			this.ClientSize = new System.Drawing.Size(1289, 480);
+			this.Controls.Add(this.gpEtape2);
+			this.Controls.Add(this.gpEtape1);
 			this.Controls.Add(this.CBNodeFin);
 			this.Controls.Add(this.CBNodeInit);
 			this.Controls.Add(this.LInitNode);
 			this.Controls.Add(this.LErrNode);
 			this.Controls.Add(this.BNoeuds);
-			this.Controls.Add(this.BVerif);
-			this.Controls.Add(this.LConsigne2);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.BAjoutEtape);
-			this.Controls.Add(this.DGVOuvFerm);
-			this.Controls.Add(this.LConsigne1);
 			this.Controls.Add(this.LAperGra);
 			this.Controls.Add(this.LBArcs);
 			this.Controls.Add(this.LNoeuFin);
@@ -240,6 +304,10 @@
 			this.Name = "FormUser";
 			this.Text = "FormUser";
 			((System.ComponentModel.ISupportInitialize)(this.DGVOuvFerm)).EndInit();
+			this.gpEtape1.ResumeLayout(false);
+			this.gpEtape1.PerformLayout();
+			this.gpEtape2.ResumeLayout(false);
+			this.gpEtape2.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -258,11 +326,16 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Fermes;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Ouverts;
         private System.Windows.Forms.Label LConsigne2;
-		private System.Windows.Forms.Button BVerif;
+		private System.Windows.Forms.Button BVerifEtape;
 		private System.Windows.Forms.Button BNoeuds;
 		private System.Windows.Forms.Label LErrNode;
 		private System.Windows.Forms.Label LInitNode;
 		private System.Windows.Forms.ComboBox CBNodeInit;
 		private System.Windows.Forms.ComboBox CBNodeFin;
+		private System.Windows.Forms.GroupBox gpEtape1;
+		private System.Windows.Forms.GroupBox gpEtape2;
+		private System.Windows.Forms.TreeView tvArbre;
+		private System.Windows.Forms.Button bValiderTV;
+		private System.Windows.Forms.Label label2;
 	}
 }
