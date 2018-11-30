@@ -49,13 +49,13 @@
     <Compile Include="formPresentation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formPresentation.Designer.cs">
+    <Compile Include="formPresentation.designer.cs">
       <DependentUpon>formPresentation.cs</DependentUpon>
     </Compile>
     <Compile Include="formQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formQuestion.Designer.cs">
+    <Compile Include="formQuestion.designer.cs">
       <DependentUpon>formQuestion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />

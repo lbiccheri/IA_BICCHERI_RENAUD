@@ -75,7 +75,7 @@
 			this.MinimumSize = new System.Drawing.Size(1092, 612);
 			this.Name = "formPresentation";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Form1";
+			this.Text = "Examen IA";
 			this.ResumeLayout(false);
 
 		}

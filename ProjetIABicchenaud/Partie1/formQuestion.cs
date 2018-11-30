@@ -23,7 +23,9 @@ namespace Partie1
         public formQuestion()
         {
             InitializeComponent();
+            
             lbVerification.Text = "";
+            pictureBoxTitre.SendToBack();
 
             // numéro de la question
             Random rand = new Random();
@@ -46,13 +48,16 @@ namespace Partie1
             {
                 compt++;
                 lbNbQuestion.Text = compt + "/20";
-                
+                pictureBoxTitre.SendToBack();
+
                 // Lecture du fichier XML
                 XmlDocument questionnaire = new XmlDocument();
                 questionnaire.Load("../../Data.xml");
 
                 // numéro de la question, foreach permet de compter le nombre de noeux Question pour éviter de compiler lorsque l'on rajoute une question
                 Random rand = new Random();
+                pictureBoxTitre.Image = null;
+                pictureBoxTitre.SendToBack();
                 foreach (XmlNode node in questionnaire.SelectNodes("//ArrayOfQuestion"))
                 {
                     count = node.SelectNodes(".//Question").Count;
@@ -108,6 +113,15 @@ namespace Partie1
             // Donne le titre de la question
             XmlNode titreQuestion = question.SelectSingleNode("titre");
             lbQuestion.Text = titreQuestion.InnerText;
+
+            //Affiche l'image de la question
+            XmlNode imageQ = question.SelectSingleNode("image");
+            if (imageQ.InnerText !="")
+            {
+                Image image = Image.FromFile(imageQ.InnerText);
+                pictureBoxTitre.Image = image;
+                pictureBoxTitre.BringToFront();
+            }
 
             //// Donne les propositions à la question
 

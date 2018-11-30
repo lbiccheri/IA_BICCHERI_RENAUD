@@ -1,35 +1,174 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfQuestion xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ArrayOfQuestion >
   <Question>    
-    <titre> Ceci est un exemple : Quel est l'intitulé du cours? </titre>
-    <A> Intelligence Artificielle </A>
-    <B> C# </B>
-    <C> FH </C>
-    <reponseBonne> Intelligence Artificielle </reponseBonne>
+    <titre> Si l'on a un bras robotique, présentant des liaisons "pivots", avec 6 axes de rotations, combien a t-on de degrés de liberté?</titre>
+    <A> 7 </A>
+    <B> 6 </B>
+    <C> 8 </C>
+    <reponseBonne> 6 </reponseBonne>
+  <image></image>
   </Question>
 
   <Question>
-    <titre> Quelle est la deuxième question? </titre>
-    <A> A </A>
-    <B> B </B>
-    <C> C </C>
-    <reponseBonne> B </reponseBonne>
+    <titre> Quelle est la fonction d'un servo controleur? </titre>
+    <A> Reçoit des pulsations d'une Arduino(exemple), et suivant les pulsations renvoit en sortie un signal à un servo moteur </A>
+    <B> Fonctionne comme un processeur d'un ordinateur </B>
+    <C> Décide des déplacements d'un bras robotique </C>
+    <reponseBonne> Reçoit des pulsations d'une Arduino(exemple), et suivant les pulsations renvoit en sortie un signal à un servo moteur </reponseBonne>
+  <image></image>
   </Question>
   
 <Question>
-    <titre> Quelle est la troisième question? </titre>
-    <A> A </A>
-    <B> B </B>
-    <C> C </C>
-    <reponseBonne> A </reponseBonne>
+    <titre> Quel est le type de capteur utilisé pour la détection d'obstacle dans une voiture autonome? </titre>
+    <A> Lidar </A>
+    <B> Capteur à ultrason</B>
+    <C> Sonar </C>
+    <reponseBonne> Lidar </reponseBonne>
+<image></image>
   </Question>
   
 <Question>
-    <titre> Quelle est la quatrième question? </titre>
-    <A> A </A>
-    <B> B </B>
-    <C> C </C>
-    <reponseBonne> C </reponseBonne>
+    <titre> Quelle est la différence entre une IA faible et IA forte? </titre>
+    <A> L'efficacité des programmes est accrue </A>
+    <B> Les programmes traitent une situation plus rapidement </B>
+    <C> Les programmes ont autant de conscience que les humains </C>
+    <reponseBonne> Les programmes ont autant de conscience que les humains </reponseBonne>
+<image></image>
   </Question>
 
+  <Question>
+    <titre> L'algorithme Minmax est : </titre>
+    <A> Utilisé en IA pour jouer à deux contre deux </A>
+    <B> Utilisé en IA pour trouver le chemin le plus plus court dans un graphe </B>
+    <C> Utilisé pour la détection de contours en vision par ordinateur </C>
+    <reponseBonne> Utilisé en IA pour jouer à deux contre deux </reponseBonne>
+  <image></image>
+  </Question>
+
+  <Question>
+    <titre> Que faut-il faire pour passer d'un volume de texte à des cadres syntaxiques? </titre>
+    <A> Une analyse syntaxique </A>
+    <B> Une généralisation </B>
+    <C> Une agrégation statistique </C>
+    <reponseBonne> Une analyse syntaxique </reponseBonne>
+  <image></image>
+  </Question>
+
+  <Question>
+    <titre> Une ontologie est : </titre>
+    <A> un modèle permettant de définir une suite d'événements réalisable par un processus </A>
+    <B> un modèle de données représentatif d'un ensemble de concepts dans un domaine, ainsi que des relations entre ces concepts </B>
+    <C> Ensemble de neurones formels interconnectés permettant la résolution de problèmes complexes tels que la reconnaissance des formes </C>
+    <reponseBonne> un modèle de données représentatif d'un ensemble de concepts dans un domaine, ainsi que des relations entre ces concepts </reponseBonne>
+  <image></image>
+  </Question>
+
+  <Question>
+    <titre> Comment fonctionne la compréhension d'un texte par IA? </titre>
+    <A> Par mots clés associés</A>
+    <B> Par compréhension du sens des phrases </B>
+    <C> Par analyse du contexte des phrases </C>
+    <reponseBonne> Par mots clés associés </reponseBonne>
+  <image></image>
+  </Question>
+  
+    <Question>
+      <titre> Comment placer 8 reines sur un échiquier 8x8 sans qu'aucune ne soit prise avec une autre?</titre>
+      <A> Pas sur les mêmes lignes, mais sur les mêmes diagonales </A>
+      <B> Sur les mêmes lignes et sur les mêmes diagonales </B>
+      <C> Pas sur les mêmes lignes ni les mêmes diagonales </C>
+      <reponseBonne> Pas sur les mêmes lignes ni les mêmes diagonales </reponseBonne>
+    <image></image>
+    </Question>
+
+  <Question>
+    <titre> Quel est l'objectif de l'algorithme de Dijkstra? </titre>
+    <A> Résoudre un système impliquant un réseau neuronal </A>
+    <B> Trouver le chemin le plus court entre un E initial et un E final </B>
+    <C> Déterminer une réponse logique lors d'un traitement de texte </C>
+    <reponseBonne> Trouver le chemin le plus court entre un E initial et un E final </reponseBonne>
+  <image></image>
+  </Question>
+  
+<Question>
+    <titre> Les limites de Dijkstra sont : </titre>
+    <A> Lorsqu'il y a trop de noeuds ouverts, l'algorithme est inexploitable </A>
+    <B> Lorsqu'il y a un très grand nombre de successeurs, l'algorithme est inexploitable </B>
+    <C> Lorsqu'il y a trop de noeuds fermés,  l'algorithme est inexploitable </C>
+    <reponseBonne> Lorsqu'il y a un très grand nombre de successeurs, l'algorithme est inexploitable </reponseBonne>
+<image></image>
+  </Question>
+  
+<Question>
+    <titre>Par quoi faut-il remplacer X pour compter le nombre de relations non symétriques du graphe ?</titre>
+    <A> if ((M[i,j] == "a") || (M[i,j]== "b")) cpt++ ; </A>
+    <B> if ((M[i,j] != "0") et (M[j,i] != M[i,j])) cpt++ ; </B>
+    <C>  Ni a, ni b, il faut d’abord modifier les lignes précédentes. </C>
+    <reponseBonne></reponseBonne>
+  <image>program.jpg</image>
+  </Question>
+
+  <Question>
+    <titre> D'après cet arbre, quel est le meilleur chemin a adopté? </titre>
+    <A> Gauche</A>
+    <B> Milieu</B>
+    <C> Droite</C>
+    <reponseBonne> Milieu</reponseBonne>
+    <image>minmax.png</image>
+  </Question>
+
+  <Question>
+    <titre> Quel est le mot à trouver? </titre>
+    <A> Arbre</A>
+    <B> Titre</B>
+    <C> Cadre</C>
+    <reponseBonne> Cadre</reponseBonne>
+    <image>motsecret.png</image>
+  </Question>
+
+  <Question>
+    <titre> Que représente cette image? </titre>
+    <A> Arbre de décision</A>
+    <B> Ontologie</B>
+    <C> Réseau Bayésien</C>
+    <reponseBonne> Arbre de décision</reponseBonne>
+    <image>arbredecision.png</image>
+  </Question>
+
+  <Question>
+    <titre> Faites une matrice adjacente, et quelles valeurs auriez vous mis en A/D? </titre>
+    <A> 1</A>
+    <B> -1</B>
+    <C> 3</C>
+    <reponseBonne> -1</reponseBonne>
+    <image>matriceadjacente.png</image>
+  </Question>
+
+  <Question>
+    <titre> Quelle différence trouve t-on entre un algorithme Minmax et un algorithme Alpha Beta?</titre>
+    <A> On n'utilise pas le même type de conception </A>
+    <B> On n'explorera pas les branches inutiles</B>
+    <C> Le contexte d'utilisation n'est pas le même </C>
+    <reponseBonne> On n'explorera pas les branches inutiles</reponseBonne>
+    <image></image>
+  </Question>
+
+  <Question>
+    <titre> Dans quel cas A* garantit d'avoir le chemin le plus court?</titre>
+    <A> Heuristique est un minorant du coût du chemin restant réel</A>
+    <B> Association avec l'algorithme de Dijkstra</B>
+    <C> On ne prend pas d'heuristique pour trouver le chemin le plus court</C>
+    <reponseBonne> Heuristique est un minorant du coût du chemin restant réel</reponseBonne>
+    <image></image>
+  </Question>
+  
+<Question>
+    <titre> Faites une matrice adjacente, et quelles valeurs auriez vous mis en A/D? </titre>
+    <A> 15</A>
+    <B> 0</B>
+    <C> 3</C>
+    <reponseBonne> -1</reponseBonne>
+    <image>adjacencymatrix.jpeg</image>
+  </Question>
+  
 </ArrayOfQuestion>
