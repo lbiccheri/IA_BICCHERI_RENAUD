@@ -20,6 +20,7 @@ namespace Partie1
         int repJuste = 0;
         int numeroQuestion;
         int count;
+		List<int> numero;
         public formQuestion()
         {
             InitializeComponent();
@@ -27,15 +28,29 @@ namespace Partie1
             lbVerification.Text = "";
             pictureBoxTitre.SendToBack();
 
-            // numéro de la question
-            Random rand = new Random();
-            numeroQuestion = rand.Next(4);
-
             // Lecture du fichier XML
             XmlDocument questionnaire = new XmlDocument();
-            questionnaire.Load("../../Data.xml");            
+            questionnaire.Load("../../Data.xml");
 
-            this.AffichageQuestion(numeroQuestion, questionnaire);         
+			// numéro de la question
+			Random rand = new Random();
+			foreach (XmlNode node in questionnaire.SelectNodes("//ArrayOfQuestion"))
+				count = node.SelectNodes(".//Question").Count;
+
+
+			//Tableau qui garde les questions qui n'ont pas été encore posées
+			numero = new List<int>();
+			for (int i = 0; i < count; i++)
+				numero.Add(i);
+
+			//On sélectionne aléatoirement la première question
+			numeroQuestion = rand.Next(count);
+
+			//On la supprime de cette liste
+			numero.Remove(numeroQuestion);
+
+
+			this.AffichageQuestion(numeroQuestion, questionnaire);         
             
             lbNbQuestion.Text = compt + "/20";                        
         }               
@@ -48,21 +63,19 @@ namespace Partie1
             {
                 compt++;
                 lbNbQuestion.Text = compt + "/20";
-                pictureBoxTitre.SendToBack();
+				pictureBoxTitre.SendToBack();
+				pictureBoxTitre.Image = null;
 
-                // Lecture du fichier XML
-                XmlDocument questionnaire = new XmlDocument();
+				// Lecture du fichier XML
+				XmlDocument questionnaire = new XmlDocument();
                 questionnaire.Load("../../Data.xml");
 
-                // numéro de la question, foreach permet de compter le nombre de noeux Question pour éviter de compiler lorsque l'on rajoute une question
+                // ON sélectionne une question qui n'a pas encore été posée (via le tableau prévu à cet effet)
                 Random rand = new Random();
-                pictureBoxTitre.Image = null;
-                pictureBoxTitre.SendToBack();
-                foreach (XmlNode node in questionnaire.SelectNodes("//ArrayOfQuestion"))
-                {
-                    count = node.SelectNodes(".//Question").Count;
-                }
-                numeroQuestion = rand.Next(count);
+				numeroQuestion = numero[rand.Next(numero.Count)];
+				// On supprime la question sélectionnée
+				numero.Remove(numeroQuestion);
+
 
                 this.AffichageQuestion(numeroQuestion, questionnaire);
 
@@ -147,6 +160,6 @@ namespace Partie1
             this.ResultatJuste(question);
 
             btVerification.SendToBack();
-        }        
-    }
+        }
+	}
 }

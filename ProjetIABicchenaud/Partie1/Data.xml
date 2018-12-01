@@ -136,7 +136,7 @@
   </Question>
 
   <Question>
-    <titre> Faites une matrice adjacente, et quelles valeurs auriez vous mis en A/D? </titre>
+    <titre> Construisez la matrice adjacente associée, quelle valeur auriez vous mis en A/D ? </titre>
     <A> 1</A>
     <B> -1</B>
     <C> 3</C>
@@ -163,11 +163,11 @@
   </Question>
   
 <Question>
-    <titre> Faites une matrice adjacente, et quelles valeurs auriez vous mis en A/D? </titre>
+    <titre> Construisez la matrice adjacente associée, quelle valeur auriez vous mis en 1/2 (X) ? </titre>
     <A> 15</A>
     <B> 0</B>
     <C> 3</C>
-    <reponseBonne> -1</reponseBonne>
+    <reponseBonne> 15</reponseBonne>
     <image>adjacencymatrix.jpg</image>
   </Question>
 
