@@ -51,15 +51,18 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.bValiderTV = new System.Windows.Forms.Button();
 			this.tvArbre = new System.Windows.Forms.TreeView();
+			this.label3 = new System.Windows.Forms.Label();
+			this.gbInit = new System.Windows.Forms.GroupBox();
 			((System.ComponentModel.ISupportInitialize)(this.DGVOuvFerm)).BeginInit();
 			this.gpEtape1.SuspendLayout();
 			this.gpEtape2.SuspendLayout();
+			this.gbInit.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// LNoeuInit
 			// 
 			this.LNoeuInit.AutoSize = true;
-			this.LNoeuInit.Location = new System.Drawing.Point(253, 121);
+			this.LNoeuInit.Location = new System.Drawing.Point(197, 187);
 			this.LNoeuInit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.LNoeuInit.Name = "LNoeuInit";
 			this.LNoeuInit.Size = new System.Drawing.Size(86, 17);
@@ -68,7 +71,7 @@
 			// 
 			// BImportFichier
 			// 
-			this.BImportFichier.Location = new System.Drawing.Point(71, 32);
+			this.BImportFichier.Location = new System.Drawing.Point(19, 32);
 			this.BImportFichier.Name = "BImportFichier";
 			this.BImportFichier.Size = new System.Drawing.Size(120, 67);
 			this.BImportFichier.TabIndex = 10;
@@ -79,7 +82,7 @@
 			// LNoeuFin
 			// 
 			this.LNoeuFin.AutoSize = true;
-			this.LNoeuFin.Location = new System.Drawing.Point(253, 176);
+			this.LNoeuFin.Location = new System.Drawing.Point(199, 249);
 			this.LNoeuFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.LNoeuFin.Name = "LNoeuFin";
 			this.LNoeuFin.Size = new System.Drawing.Size(80, 17);
@@ -90,7 +93,7 @@
 			// 
 			this.LBArcs.FormattingEnabled = true;
 			this.LBArcs.ItemHeight = 16;
-			this.LBArcs.Location = new System.Drawing.Point(71, 141);
+			this.LBArcs.Location = new System.Drawing.Point(19, 152);
 			this.LBArcs.Name = "LBArcs";
 			this.LBArcs.Size = new System.Drawing.Size(120, 212);
 			this.LBArcs.TabIndex = 14;
@@ -98,7 +101,7 @@
 			// LAperGra
 			// 
 			this.LAperGra.AutoSize = true;
-			this.LAperGra.Location = new System.Drawing.Point(69, 121);
+			this.LAperGra.Location = new System.Drawing.Point(16, 127);
 			this.LAperGra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.LAperGra.Name = "LAperGra";
 			this.LAperGra.Size = new System.Drawing.Size(122, 17);
@@ -183,7 +186,7 @@
 			// 
 			// BNoeuds
 			// 
-			this.BNoeuds.Location = new System.Drawing.Point(256, 252);
+			this.BNoeuds.Location = new System.Drawing.Point(200, 311);
 			this.BNoeuds.Name = "BNoeuds";
 			this.BNoeuds.Size = new System.Drawing.Size(94, 53);
 			this.BNoeuds.TabIndex = 23;
@@ -203,7 +206,7 @@
 			// LInitNode
 			// 
 			this.LInitNode.AutoSize = true;
-			this.LInitNode.Location = new System.Drawing.Point(232, 70);
+			this.LInitNode.Location = new System.Drawing.Point(197, 128);
 			this.LInitNode.MaximumSize = new System.Drawing.Size(180, 0);
 			this.LInitNode.Name = "LInitNode";
 			this.LInitNode.Size = new System.Drawing.Size(164, 34);
@@ -213,7 +216,7 @@
 			// CBNodeInit
 			// 
 			this.CBNodeInit.FormattingEnabled = true;
-			this.CBNodeInit.Location = new System.Drawing.Point(256, 141);
+			this.CBNodeInit.Location = new System.Drawing.Point(200, 209);
 			this.CBNodeInit.Name = "CBNodeInit";
 			this.CBNodeInit.Size = new System.Drawing.Size(51, 24);
 			this.CBNodeInit.TabIndex = 26;
@@ -221,7 +224,7 @@
 			// CBNodeFin
 			// 
 			this.CBNodeFin.FormattingEnabled = true;
-			this.CBNodeFin.Location = new System.Drawing.Point(256, 196);
+			this.CBNodeFin.Location = new System.Drawing.Point(200, 269);
 			this.CBNodeFin.Name = "CBNodeFin";
 			this.CBNodeFin.Size = new System.Drawing.Size(51, 24);
 			this.CBNodeFin.TabIndex = 27;
@@ -235,21 +238,22 @@
 			this.gpEtape1.Controls.Add(this.DGVOuvFerm);
 			this.gpEtape1.Controls.Add(this.LConsigne1);
 			this.gpEtape1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.gpEtape1.Location = new System.Drawing.Point(465, 12);
+			this.gpEtape1.Location = new System.Drawing.Point(403, 13);
 			this.gpEtape1.Name = "gpEtape1";
-			this.gpEtape1.Size = new System.Drawing.Size(403, 456);
+			this.gpEtape1.Size = new System.Drawing.Size(390, 455);
 			this.gpEtape1.TabIndex = 28;
 			this.gpEtape1.TabStop = false;
 			this.gpEtape1.Text = "Première étape";
 			// 
 			// gpEtape2
 			// 
+			this.gpEtape2.Controls.Add(this.label3);
 			this.gpEtape2.Controls.Add(this.label2);
 			this.gpEtape2.Controls.Add(this.bValiderTV);
 			this.gpEtape2.Controls.Add(this.tvArbre);
-			this.gpEtape2.Location = new System.Drawing.Point(933, 13);
+			this.gpEtape2.Location = new System.Drawing.Point(799, 13);
 			this.gpEtape2.Name = "gpEtape2";
-			this.gpEtape2.Size = new System.Drawing.Size(336, 455);
+			this.gpEtape2.Size = new System.Drawing.Size(268, 455);
 			this.gpEtape2.TabIndex = 29;
 			this.gpEtape2.TabStop = false;
 			this.gpEtape2.Text = "Deuxième étape";
@@ -257,8 +261,8 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(25, 396);
-			this.label2.MaximumSize = new System.Drawing.Size(289, 0);
+			this.label2.Location = new System.Drawing.Point(22, 413);
+			this.label2.MaximumSize = new System.Drawing.Size(235, 0);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(46, 17);
 			this.label2.TabIndex = 4;
@@ -266,10 +270,12 @@
 			// 
 			// bValiderTV
 			// 
+			this.bValiderTV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.bValiderTV.Enabled = false;
-			this.bValiderTV.Location = new System.Drawing.Point(25, 306);
+			this.bValiderTV.Location = new System.Drawing.Point(25, 327);
 			this.bValiderTV.Name = "bValiderTV";
-			this.bValiderTV.Size = new System.Drawing.Size(289, 83);
+			this.bValiderTV.Size = new System.Drawing.Size(221, 83);
 			this.bValiderTV.TabIndex = 3;
 			this.bValiderTV.Text = "Valider l\'arbre";
 			this.bValiderTV.UseVisualStyleBackColor = true;
@@ -277,30 +283,54 @@
 			// 
 			// tvArbre
 			// 
+			this.tvArbre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.tvArbre.LabelEdit = true;
-			this.tvArbre.Location = new System.Drawing.Point(25, 37);
+			this.tvArbre.Location = new System.Drawing.Point(25, 107);
 			this.tvArbre.Name = "tvArbre";
-			this.tvArbre.Size = new System.Drawing.Size(289, 255);
+			this.tvArbre.Size = new System.Drawing.Size(221, 205);
 			this.tvArbre.TabIndex = 0;
 			this.tvArbre.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvArbre_NodeMouseDoubleClick);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(22, 37);
+			this.label3.MaximumSize = new System.Drawing.Size(235, 0);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(214, 51);
+			this.label3.TabIndex = 5;
+			this.label3.Text = "Remplissez l\'arbre final avec les noeuds qui vous ont permis de trouver le plus c" +
+    "ourt chemin";
+			// 
+			// gbInit
+			// 
+			this.gbInit.Controls.Add(this.BImportFichier);
+			this.gbInit.Controls.Add(this.LBArcs);
+			this.gbInit.Controls.Add(this.LAperGra);
+			this.gbInit.Controls.Add(this.CBNodeFin);
+			this.gbInit.Controls.Add(this.BNoeuds);
+			this.gbInit.Controls.Add(this.LInitNode);
+			this.gbInit.Controls.Add(this.CBNodeInit);
+			this.gbInit.Controls.Add(this.LNoeuInit);
+			this.gbInit.Controls.Add(this.LNoeuFin);
+			this.gbInit.Location = new System.Drawing.Point(13, 13);
+			this.gbInit.Name = "gbInit";
+			this.gbInit.Size = new System.Drawing.Size(384, 455);
+			this.gbInit.TabIndex = 30;
+			this.gbInit.TabStop = false;
+			this.gbInit.Text = "Initialisation";
 			// 
 			// FormUser
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1289, 480);
+			this.ClientSize = new System.Drawing.Size(1079, 480);
+			this.Controls.Add(this.gbInit);
 			this.Controls.Add(this.gpEtape2);
 			this.Controls.Add(this.gpEtape1);
-			this.Controls.Add(this.CBNodeFin);
-			this.Controls.Add(this.CBNodeInit);
-			this.Controls.Add(this.LInitNode);
 			this.Controls.Add(this.LErrNode);
-			this.Controls.Add(this.BNoeuds);
-			this.Controls.Add(this.LAperGra);
-			this.Controls.Add(this.LBArcs);
-			this.Controls.Add(this.LNoeuFin);
-			this.Controls.Add(this.BImportFichier);
-			this.Controls.Add(this.LNoeuInit);
+			this.MaximumSize = new System.Drawing.Size(1097, 527);
 			this.Name = "FormUser";
 			this.Text = "FormUser";
 			((System.ComponentModel.ISupportInitialize)(this.DGVOuvFerm)).EndInit();
@@ -308,6 +338,8 @@
 			this.gpEtape1.PerformLayout();
 			this.gpEtape2.ResumeLayout(false);
 			this.gpEtape2.PerformLayout();
+			this.gbInit.ResumeLayout(false);
+			this.gbInit.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -337,5 +369,7 @@
 		private System.Windows.Forms.TreeView tvArbre;
 		private System.Windows.Forms.Button bValiderTV;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.GroupBox gbInit;
 	}
 }
