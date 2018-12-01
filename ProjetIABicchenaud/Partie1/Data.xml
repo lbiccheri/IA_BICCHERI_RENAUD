@@ -55,7 +55,7 @@
   </Question>
 
   <Question>
-    <titre> Une ontologie est : </titre>
+    <titre> Une ontologie est.. </titre>
     <A> un modèle permettant de définir une suite d'événements réalisable par un processus </A>
     <B> un modèle de données représentatif d'un ensemble de concepts dans un domaine, ainsi que des relations entre ces concepts </B>
     <C> Ensemble de neurones formels interconnectés permettant la résolution de problèmes complexes tels que la reconnaissance des formes </C>
@@ -91,7 +91,7 @@
   </Question>
   
 <Question>
-    <titre> Les limites de Dijkstra sont : </titre>
+    <titre> Les limites de Dijkstra sont.. </titre>
     <A> Lorsqu'il y a trop de noeuds ouverts, l'algorithme est inexploitable </A>
     <B> Lorsqu'il y a un très grand nombre de successeurs, l'algorithme est inexploitable </B>
     <C> Lorsqu'il y a trop de noeuds fermés,  l'algorithme est inexploitable </C>
@@ -104,7 +104,7 @@
     <A> if ((M[i,j] == "a") || (M[i,j]== "b")) cpt++ ; </A>
     <B> if ((M[i,j] != "0") et (M[j,i] != M[i,j])) cpt++ ; </B>
     <C>  Ni a, ni b, il faut d’abord modifier les lignes précédentes. </C>
-    <reponseBonne></reponseBonne>
+    <reponseBonne> if ((M[i,j] != "0") et (M[j,i] != M[i,j])) cpt++ ; </reponseBonne>
   <image>program.jpg</image>
   </Question>
 
@@ -168,7 +168,15 @@
     <B> 0</B>
     <C> 3</C>
     <reponseBonne> -1</reponseBonne>
-    <image>adjacencymatrix.jpeg</image>
+    <image>adjacencymatrix.jpg</image>
   </Question>
-  
+
+  <Question>
+    <titre>Quel algorithme va être utilisé dans un puissance 4 pour déterminer le nombre de coup minimum pour gagner?</titre>
+    <A>Algorithme de Dijkstra</A>
+    <B>Algorithme Minmax</B>
+    <C>Algorithme A*</C>
+    <reponseBonne>Algorithme Minmax</reponseBonne>
+    <image></image>
+  </Question>
 </ArrayOfQuestion>
