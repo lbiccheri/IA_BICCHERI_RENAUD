@@ -131,10 +131,10 @@
             // 
             // pictureBoxTitre
             // 
-            this.pictureBoxTitre.Location = new System.Drawing.Point(612, 47);
-            this.pictureBoxTitre.MaximumSize = new System.Drawing.Size(580, 359);
+            this.pictureBoxTitre.Location = new System.Drawing.Point(612, 25);
+            this.pictureBoxTitre.MaximumSize = new System.Drawing.Size(580, 400);
             this.pictureBoxTitre.Name = "pictureBoxTitre";
-            this.pictureBoxTitre.Size = new System.Drawing.Size(500, 359);
+            this.pictureBoxTitre.Size = new System.Drawing.Size(500, 399);
             this.pictureBoxTitre.TabIndex = 14;
             this.pictureBoxTitre.TabStop = false;
             // 
